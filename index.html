@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>Manga reader 52</title>
+        <script src = "jquery-3.6.0.min.js"></script>
         <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
         
         <!-- lightgallery plugins -->
@@ -14,9 +15,10 @@
         <!-- Immagini -->
 
         <div id="lightgallery">
-            <a href="immagini/Screenshot (5).png" data-lg-size="1024-800">
+            <a class="example" href="immagini/Screenshot (5).pngs" data-lg-size="1024-800">
                 <img alt="img" src="immagini/Screenshot (5).png" width="400" height="auto"/>
             </a>
+            <!--
             <a href="immagini/Screenshot (6).png" data-lg-size="1024-800">
                 <img alt="img" src="immagini/Screenshot (6).png" width="400" height="auto"/>
             </a>
@@ -50,6 +52,7 @@
             <a href="immagini/Screenshot (16).png" data-lg-size="1024-800">
                 <img alt="img" src="immagini/Screenshot (16).png" width="400" height="auto"/>
             </a>
+            -->
         </div>
 
         <h1>This is a Heading</h1>
@@ -69,6 +72,16 @@
                 thumbHeight: "80px",
                 thumbWidth: "80px",
 
+            });
+        </script>
+
+        <!--Script controllo caricamento immagini-->
+        <script>
+
+            window.addEventListener("load", event => {
+            var image = document.querySelector('.example');
+            var isLoaded = image.complete && image.naturalHeight !== 0;
+            alert(isLoaded);
             });
         </script>
     </body>
