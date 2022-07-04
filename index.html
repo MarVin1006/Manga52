@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>\\
+    <head>
+        <title>Page Title</title>
+        <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
+        
+        <!-- lightgallery plugins -->
+        <link type="text/css" rel="stylesheet" href="css/lg-zoom.css" />
+        <link type="text/css" rel="stylesheet" href="css/lg-thumbnail.css" />
+        
+    </head>
+    <body>
+
+        <!-- Immagini -->
+
+        <div id="lightgallery">
+            <a href="immagini/Screenshot (5).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (5).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (6).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (6).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (7).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (7).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (8).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (8).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (9).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (9).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (10).png" data-lg-size="1600-2400">
+                <img alt="img" src="immagini/Screenshot (10).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (11).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (11).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (12).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (12).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (13).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (13).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (14).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (14).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (15).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (15).png" width="400" height="auto"/>
+            </a>
+            <a href="immagini/Screenshot (16).png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/Screenshot (16).png" width="400" height="auto"/>
+            </a>
+        </div>
+
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+
+    
+        
+        <script src="lightgallery.umd.js"></script>
+
+        <!-- lightgallery plugins -->
+        <script src="plugins/thumbnail/lg-thumbnail.umd.js"></script>
+        <script src="plugins/zoom/lg-zoom.umd.js"></script>
+        <script type="text/javascript">
+            lightGallery(document.getElementById('lightgallery'), {
+                plugins: [lgZoom, lgThumbnail],
+                speed: 500,
+                thumbHeight: "80px",
+                thumbWidth: "80px",
+
+            });
+        </script>
+    </body>
+</html> 
