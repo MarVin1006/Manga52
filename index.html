@@ -2,7 +2,6 @@
 <html>qwerty
     <head>
         <title>Manga reader 52</title>
-        <script src = "jquery-3.6.0.min.js"></script>
         <link type="text/css" rel="stylesheet" href="css/lightgallery.css" />
         
         <!-- lightgallery plugins -->
@@ -15,8 +14,8 @@
         <!-- Immagini -->
 
         <div id="lightgallery">
-            <a class="example" href="immagini/Screenshot (5).png" data-lg-size="1024-800">
-                <img alt="img" src="immagini/Screenshot (5).png" width="400" height="auto"/>
+            <a class="example" href="immagini/0.png" data-lg-size="1024-800">
+                <img alt="img" src="immagini/0.png" width="400" height="auto"/>
             </a>
             <!--
             <a href="immagini/Screenshot (6).png" data-lg-size="1024-800">
@@ -60,45 +59,7 @@
         <button type="button" id="button">Click Me!</button> 
 
         <!--Script controllo caricamento immagini-->
-        <script>
-            url = 'immagini/Screenshot (6).pngs';
-
-            function generateImage(url) {
-                var a = document.createElement('a');
-                a.href = url;
-
-                var img = document.createElement('img');
-                img.alt = "img";
-                img.src=url;
-
-                var ogwidth = img.width;
-
-                img.width="400";
-
-                img.height= img.height/(ogwidth/img.width);
-
-                a.appendChild(img);
-                document.getElementById('lightgallery').appendChild(a);
-        } 
-        
-            function imageExists(url) {
-            return new Promise(resolve => {
-                var img = new Image()
-                img.addEventListener('load', () => resolve(true))
-                img.addEventListener('error', () => resolve(false))
-                img.src = url
-            })
-            }
-            imageExists(url).then(ok => {
-                console.log(`RESULT: exists=${ok}`)
-                if (ok == true){
-                    generateImage();
-                }
-            
-            })
-  //                    => RESULT: exists=true
-
-        </script>
+        <script src="loader.js"></script>
 
         <script src="lightgallery.umd.js"></script>
 
