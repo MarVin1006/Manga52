@@ -61,14 +61,15 @@
 
         <!--Script controllo caricamento immagini-->
         <script>
-            window.addEventListener("load", generateImage(), false);
-            function generateImage() {
+            url = 'immagini/Screenshot (6).pngs';
+
+            function generateImage(url) {
                 var a = document.createElement('a');
-                a.href = 'immagini/Screenshot (6).png';
+                a.href = url;
 
                 var img = document.createElement('img');
                 img.alt = "img";
-                img.src="immagini/Screenshot (6).png";
+                img.src=url;
 
                 var ogwidth = img.width;
 
@@ -79,8 +80,7 @@
                 a.appendChild(img);
                 document.getElementById('lightgallery').appendChild(a);
         } 
-
-            window.addEventListener("load", imageExists("immagini/Screenshot (5).pngs"), false);
+        
             function imageExists(url) {
             return new Promise(resolve => {
                 var img = new Image()
@@ -89,8 +89,13 @@
                 img.src = url
             })
             }
-            const url = 'http://www.google.com/images/srpr/nav_logo14.png';
-            imageExists(url).then(ok => console.log(`RESULT: exists=${ok}`))
+            imageExists(url).then(ok => {
+                console.log(`RESULT: exists=${ok}`)
+                if (ok == true){
+                    generateImage();
+                }
+            
+            })
   //                    => RESULT: exists=true
 
         </script>
